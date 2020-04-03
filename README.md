@@ -1,3 +1,4 @@
+
 # Tests de recrutement Flutter
 
 ## Introduction
@@ -11,7 +12,7 @@ En revanche, les choix devront être argumentés dans un fichier `arguments.md` 
 
 ## Evaluation
 
-Etant donné que le candidat est libre de ces choix, nous estimons que l'application livrée est conforme à sa vision de Flutter et du développement mobile en général.
+Etant donné que le candidat est libre de ses choix, nous estimons que l'application livrée est conforme à sa vision de Flutter et du développement mobile en général.
 
 De notre côté, nous évaluerons le résultat sous différents aspects :
 
@@ -24,7 +25,7 @@ De notre côté, nous évaluerons le résultat sous différents aspects :
 * soin apporté à l'UI et à l'UX, gestion des erreurs, du chargement, etc.
 
 > Tous les éléments sont importants ici, ne pas se fier à l'ordre de la liste.
-> En effet, la gestion des erreurs et des contenus vide, par exemple, nous semble dans une application mobile être des éléments très importants pour la navigation utilisateur, il est donc capital d'y apporter une attention particulière.
+> En effet, la gestion des erreurs et des contenus vide, par exemple, nous semble dans une application mobile être très importants pour la navigation utilisateur, il est donc capital d'y apporter une attention particulière.
 
 Rappelons que **tout choix peut être intéressant à condition qu'il soit argumenté et valable dans un contexte donné**.
 Le candidat a donc tout intérêt à remplir le fichier `arguments.md` avec le maximum d'informations.
@@ -33,7 +34,7 @@ Le candidat a donc tout intérêt à remplir le fichier `arguments.md` avec le m
 L'application à développer est une application très basique mais représentant des fonctionnalités récurrentes en développement mobile.
 
 ### 1. Un système d'authentification persistente
-Il est demander au candidat de mettre en place une **fausse** identification.
+Il est demandé au candidat de mettre en place une **fausse** identification.
 L'idée est d'avoir, au démarrage de l'application, un **splashscreen**, puis, selon si l'utilisateur est connecté ou non :
 
 * un écran de Login
@@ -50,7 +51,7 @@ Ce sera donc au moment du splashscreen que l'on vérifiera si l'utilisateur est 
 La Home de l'application se compose en **2 écrans** portés par une **BottomBar** :
 
 * la liste des posts qui amènent vers un détail
-* les favoris
+* la liste des favoris qui amènent vers un détail
 
 ### a. La liste des posts et la vue de détail
 
@@ -61,14 +62,14 @@ Cette liste devra proposer un système de **"Pull to refresh"** pour rafraîchir
 Au clic sur un élément de la liste, une **vue de détail** du post doit-être ouverte.
 
 La vue de détail d'un post doit rappeler les éléments du post (seuls les champs "title" et "body" nous intéressent vraiment).
-Elle doit surtout contenir un moyen de **mettre en favoris** le post en question et un moyen de **revenir en arrière**, à la liste des favoris.
+Elle doit surtout contenir un moyen de **mettre en favoris** le post en question et un moyen de **revenir en arrière**, à la liste des posts donc.
 
-### b. La liste des favoris
+### b. La liste des favoris  et la vue de détail
 
-Vous l'avez donc compris avec l'écran de détail d'un post, l'application doit pouvoir gérer la mise en favoris d'un post.
+Vous l'avez donc compris avec l'écran de détail d'un post, l'application doit pouvoir gérer la mise en favoris.
 
 Cet écran va donc afficher la liste de tous les favoris de l'utilisateur.
-Au clic que un favoris, nous retombons sur la vue de détail sur laquelle nous pouvons **retirer**  l'élément des favoris.
+Au clic que un favoris, nous retombons sur la même vue de détail que tout à l'heure sur laquelle nous pouvons donc **retirer**  l'élément des favoris.
 
 Il est attendu qu'au retour sur la liste des favoris, cet élément ne soit donc **plus présent** dans la liste.
 
@@ -79,13 +80,13 @@ Il est attendu qu'au retour sur la liste des favoris, cet élément ne soit donc
 
 Nous avons donc résumé plus haut toutes les fonctionnalités attendues, la méthodologie d'évaluation et les contraintes (aucune finalement).
 
-Bien que cette application présente déjà de nombreux défis intéressants et que la liberté offerte au candidat nous permet d'évaluer beaucoup de choses, il est possible d'aller plus loin dans les fonctionnalités si l'envie vous en prend :
+Bien que cette application présente déjà de nombreux défis intéressants et que la liberté offerte au candidat nous permette d'évaluer beaucoup de choses, il est possible d'aller plus loin dans les fonctionnalités si l'envie vous en prend :
 
-* ajout des données utilisateur dans le détail d'un post
+* ajout des données utilisateur dans le détail d'un post.
 En effet, un Post a un champs `userId` que vous pouvez utiliser pour le webservice : **[https://jsonplaceholder.typicode.com/users/userId](https://jsonplaceholder.typicode.com/users/1)**
 
 * ajout d'une déconnexion
-Il serait intéressant d'avoir une manière de se déconnecter de l'application à tout moment (et donc d'effacer la persistence)
+Il serait intéressant d'avoir une manière de se déconnecter de l'application à tout moment (et donc d'effacer la persistance)
 
 * ajout de l'état favoris (ou non) dans la liste
 Ajouter un petit état "favoris" ou "non favoris" dans la liste des posts.
