@@ -1,16 +1,94 @@
-# flutterrecruitmenttest
+# Tests de recrutement Flutter
 
-A new Flutter application.
+## Introduction
 
-## Getting Started
+Ce test a pour objectif d'évaluer les compétences d'un candidat développeur sur le framework Flutter.
+Il sera demandé au candidat de réaliser une petite application avec certaines fonctionnalités précises, listées ci-dessous.
 
-This project is a starting point for a Flutter application.
+> Le candidat est entièrement libre de l'architecture choisie, des normes de codes mises en place ainsi que des packages utilisés ou non.
 
-A few resources to get you started if this is your first Flutter project:
+En revanche, les choix devront être argumentés dans un fichier `arguments.md` que nous invitons le candidat à créer à la racine du projet.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Evaluation
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Etant donné que le candidat est libre de ces choix, nous estimons que l'application livrée est conforme à sa vision de Flutter et du développement mobile en général.
+
+De notre côté, nous évaluerons le résultat sous différents aspects :
+
+* respect du fonctionnel attendu et des consignes
+* qualité du code Flutter
+* qualité du code Dart
+* architecture mise en place par rapport à la problématique
+* maintenabilité de la solution
+* responsivité de l'interface graphique sur différentes tailles de téléphone
+* soin apporté à l'UI et à l'UX, gestion des erreurs, du chargement, etc.
+
+> Tous les éléments sont importants ici, ne pas se fier à l'ordre de la liste.
+> En effet, la gestion des erreurs et des contenus vide, par exemple, nous semble dans une application mobile être des éléments très importants pour la navigation utilisateur, il est donc capital d'y apporter une attention particulière.
+
+Rappelons que **tout choix peut être intéressant à condition qu'il soit argumenté et valable dans un contexte donné**.
+Le candidat a donc tout intérêt à remplir le fichier `arguments.md` avec le maximum d'informations.
+
+## Résultat attendu
+L'application à développer est une application très basique mais représentant des fonctionnalités récurrentes en développement mobile.
+
+### 1. Un système d'authentification persistente
+Il est demander au candidat de mettre en place une **fausse** identification.
+L'idée est d'avoir, au démarrage de l'application, un **splashscreen**, puis, selon si l'utilisateur est connecté ou non :
+
+* un écran de Login
+* un écran "connecté" : la Home
+
+Le login peut tout à fait être mocké, il est cependant nécessaire de feindre un appel réseau en utilisant par exemple un :
+`Future.delayed(Duration(seconds: 1));`
+
+L'application doit mettre en place une **connexion persistante**.
+Ce sera donc au moment du splashscreen que l'on vérifiera si l'utilisateur est connecté ou non, et qu'on affichera la vue correspondante.
+
+### 2. Une fois l'utilisateur connecté
+
+La Home de l'application se compose en **2 écrans** portés par une **BottomBar** :
+
+* la liste des posts qui amènent vers un détail
+* les favoris
+
+### a. La liste des posts et la vue de détail
+
+Il est demandé au candidat d'afficher sur cet écran la liste des "posts" qu'il devra récupérer via le webservice **[https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)** proposé par la plateforme **[https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/)**
+
+Cette liste devra proposer un système de **"Pull to refresh"** pour rafraîchir celle-ci en swipant du haut vers le bas.
+
+Au clic sur un élément de la liste, une **vue de détail** du post doit-être ouverte.
+
+La vue de détail d'un post doit rappeler les éléments du post (seuls les champs "title" et "body" nous intéressent vraiment).
+Elle doit surtout contenir un moyen de **mettre en favoris** le post en question et un moyen de **revenir en arrière**, à la liste des favoris.
+
+### b. La liste des favoris
+
+Vous l'avez donc compris avec l'écran de détail d'un post, l'application doit pouvoir gérer la mise en favoris d'un post.
+
+Cet écran va donc afficher la liste de tous les favoris de l'utilisateur.
+Au clic que un favoris, nous retombons sur la vue de détail sur laquelle nous pouvons **retirer**  l'élément des favoris.
+
+Il est attendu qu'au retour sur la liste des favoris, cet élément ne soit donc **plus présent** dans la liste.
+
+> Il n'est pas demandé de persister les favoris dans l'application.
+> Ceux-ci pourront donc être vide à chaque démarrage de l'application.
+
+## Aller plus loin
+
+Nous avons donc résumé plus haut toutes les fonctionnalités attendues, la méthodologie d'évaluation et les contraintes (aucune finalement).
+
+Bien que cette application présente déjà de nombreux défis intéressants et que la liberté offerte au candidat nous permet d'évaluer beaucoup de choses, il est possible d'aller plus loin dans les fonctionnalités si l'envie vous en prend :
+
+* ajout des données utilisateur dans le détail d'un post
+En effet, un Post a un champs `userId` que vous pouvez utiliser pour le webservice : **[https://jsonplaceholder.typicode.com/users/userId](https://jsonplaceholder.typicode.com/users/1)**
+
+* ajout d'une déconnexion
+Il serait intéressant d'avoir une manière de se déconnecter de l'application à tout moment (et donc d'effacer la persistence)
+
+* ajout de l'état favoris (ou non) dans la liste
+Ajouter un petit état "favoris" ou "non favoris" dans la liste des posts.
+
+* persister les favoris
+L'idée est de garder en mémoire l'état des favoris et donc de les retrouver même après un redémarrage de l'application.
