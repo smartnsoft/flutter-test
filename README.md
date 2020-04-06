@@ -65,7 +65,7 @@ La Home de l'application se compose en **2 écrans** portés par une **BottomBar
 
 #### a. Les listes des livres et la vue de détail
 
-Il est demandé au candidat d'afficher sur cet écran la liste des livre qu'il devra récupérer via le webservice **[https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)** proposé par la plateforme **[https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/)**
+Il est demandé au candidat d'afficher sur cet écran la liste des livre qu'il devra récupérer via le webservice **[https://next.json-generator.com/api/json/get/Vy0sPkEvO?delay=1200](https://next.json-generator.com/api/json/get/Vy0sPkEvO?delay=1200)**
 
 Il s'agit en fait de 2 listes, l'une verticale et l'autre horizontal, avec des représentation graphique spécifique pour un même livre.
 
