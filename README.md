@@ -1,6 +1,8 @@
 
 # Tests de recrutement Flutter
 
+![alt-text-1](<img src="https://raw.githubusercontent.com/smartnsoft/flutter-test/master/documentation/splash.png" width="140" height="280" hspace="20"/> "title-1") ![alt-text-2](<img src="https://raw.githubusercontent.com/smartnsoft/flutter-test/master/documentation/login.png" width="140" height="280" hspace="20"/> "title-2")
+
 ## Introduction
 
 Ce test a pour objectif d'évaluer les compétences d'un candidat développeur sur le framework Flutter.
@@ -22,7 +24,7 @@ De notre côté, nous évaluerons le résultat sous différents aspects :
 * architecture mise en place par rapport à la problématique
 * maintenabilité de la solution
 * responsivité de l'interface graphique sur différentes tailles de téléphone
-* soin apporté à l'UI et à l'UX, gestion des erreurs, du chargement, etc.
+* respect des maquettes et soin apporté à l'UI et à l'UX, gestion des erreurs, du chargement, etc.
 
 > Tous les éléments sont importants ici, ne pas se fier à l'ordre de la liste.
 > En effet, la gestion des erreurs et des contenus vide, par exemple, nous semble dans une application mobile être très importants pour la navigation utilisateur, il est donc capital d'y apporter une attention particulière.
@@ -30,8 +32,15 @@ De notre côté, nous évaluerons le résultat sous différents aspects :
 Rappelons que **tout choix peut être intéressant à condition qu'il soit argumenté et valable dans un contexte donné**.
 Le candidat a donc tout intérêt à remplir le fichier `arguments.md` avec le maximum d'informations.
 
+Il est important que le candidat construise une application respectant le plus possible les maquettes fournies.
+Selon le niveau du candidat, il n'est pas nécessaire de tout faire, mais le travail de développeur est tout de même beaucoup basé sur le respect des maquettes auxquelles nous accordons beaucoup d'importance.
+
+Plus l'application respectera ces maquettes, meilleure sera l'évaluation !
+
+> L'accès aux maquettes et aux ressources associées vous a normalement été communiqué. Si ce n'est pas le cas, merci de revenir vers nous.
+
 ## Résultat attendu
-L'application à développer est une application très basique mais représentant des fonctionnalités récurrentes en développement mobile.
+L'application à développer est une application basique mais représentant des fonctionnalités récurrentes en développement mobile.
 
 ### 1. Un système d'authentification persistente
 Il est demandé au candidat de mettre en place une **fausse** identification.
@@ -50,26 +59,29 @@ Ce sera donc au moment du splashscreen que l'on vérifiera si l'utilisateur est 
 
 La Home de l'application se compose en **2 écrans** portés par une **BottomBar** :
 
-* la liste des posts qui amènent vers un détail
+* une double liste des livres qui amènent vers un détail
 * la liste des favoris qui amènent vers un détail
 
-### a. La liste des posts et la vue de détail
+#### a. Les listes des livres et la vue de détail
 
-Il est demandé au candidat d'afficher sur cet écran la liste des "posts" qu'il devra récupérer via le webservice **[https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)** proposé par la plateforme **[https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/)**
+Il est demandé au candidat d'afficher sur cet écran la liste des livre qu'il devra récupérer via le webservice **[https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)** proposé par la plateforme **[https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/)**
 
-Cette liste devra proposer un système de **"Pull to refresh"** pour rafraîchir celle-ci en swipant du haut vers le bas.
+Il s'agit en fait de 2 listes, l'une verticale et l'autre horizontal, avec des représentation graphique spécifique pour un même livre.
 
-Au clic sur un élément de la liste, une **vue de détail** du post doit-être ouverte.
+Au clic sur un élément de la liste, une **vue de détail** du livre en question doit-être ouverte.
 
-La vue de détail d'un post doit rappeler les éléments du post (seuls les champs "title" et "body" nous intéressent vraiment).
-Elle doit surtout contenir un moyen de **mettre en favoris** le post en question et un moyen de **revenir en arrière**, à la liste des posts donc.
+La vue de détail d'un livre doit rappeler les éléments du livre, comme sur la maquette.
+Elle doit surtout contenir un moyen de **mettre en favoris** le post en question et un moyen de **revenir en arrière**, à la liste des livres donc.
 
-### b. La liste des favoris  et la vue de détail
+> Sur les maquettes, nous voyons qu'il est possible de mettre un livre en favoris depuis la liste.
+> Cette fonctionnalité est en fait un bonus (voir "Aller plus loin").
 
-Vous l'avez donc compris avec l'écran de détail d'un post, l'application doit pouvoir gérer la mise en favoris.
+#### b. La liste des favoris  et la vue de détail
+
+Vous l'avez donc compris avec l'écran de détail d'un livre (ou depuis la liste, pour ceux qui font le bonus), l'application doit pouvoir gérer la mise en favoris.
 
 Cet écran va donc afficher la liste de tous les favoris de l'utilisateur.
-Au clic que un favoris, nous retombons sur la même vue de détail que tout à l'heure sur laquelle nous pouvons donc **retirer**  l'élément des favoris.
+Au clic sur un favoris, nous retombons sur la même vue de détail que tout à l'heure sur laquelle nous pouvons donc **retirer**  l'élément des favoris.
 
 Il est attendu qu'au retour sur la liste des favoris, cet élément ne soit donc **plus présent** dans la liste.
 
@@ -78,18 +90,15 @@ Il est attendu qu'au retour sur la liste des favoris, cet élément ne soit donc
 
 ## Aller plus loin
 
-Nous avons donc résumé plus haut toutes les fonctionnalités attendues, la méthodologie d'évaluation et les contraintes (aucune finalement).
+Nous avons donc résumé plus haut toutes les fonctionnalités attendues, la méthodologie d'évaluation et les contraintes (aucune finalement, mis à part le respect des maquettes et guidelines demandées).
 
 Bien que cette application présente déjà de nombreux défis intéressants et que la liberté offerte au candidat nous permette d'évaluer beaucoup de choses, il est possible d'aller plus loin dans les fonctionnalités si l'envie vous en prend :
-
-* ajout des données utilisateur dans le détail d'un post.
-En effet, un Post a un champs `userId` que vous pouvez utiliser pour le webservice : **[https://jsonplaceholder.typicode.com/users/userId](https://jsonplaceholder.typicode.com/users/1)**
 
 * ajout d'une déconnexion
 Il serait intéressant d'avoir une manière de se déconnecter de l'application à tout moment (et donc d'effacer la persistance)
 
 * ajout de l'état favoris (ou non) dans la liste
-Ajouter un petit état "favoris" ou "non favoris" dans la liste des posts.
+Ajouter un petit état "favoris" ou "non favoris" dans la liste des livres (voir maquettes).
 
 * persister les favoris
 L'idée est de garder en mémoire l'état des favoris et donc de les retrouver même après un redémarrage de l'application.
