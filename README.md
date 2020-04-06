@@ -1,7 +1,7 @@
 
 # Tests de recrutement Flutter
 
-<img src="https://raw.githubusercontent.com/smartnsoft/flutter-test/master/documentation/splash.png" width="140" height="280" hspace="20"/> <img src="https://raw.githubusercontent.com/smartnsoft/flutter-test/master/documentation/splash.png" width="140" height="280" hspace="20"/>
+<img src="https://raw.githubusercontent.com/smartnsoft/flutter-test/master/documentation/splash.png" width="140" height="280" hspace="20"/> <img src="https://raw.githubusercontent.com/smartnsoft/flutter-test/master/documentation/login.png" width="140" height="280" hspace="20"/> <img src="https://raw.githubusercontent.com/smartnsoft/flutter-test/master/documentation/list.png" width="140" height="280" hspace="20"/> <img src="https://raw.githubusercontent.com/smartnsoft/flutter-test/master/documentation/favorites.png" width="140" height="280" hspace="20"/> <img src="https://raw.githubusercontent.com/smartnsoft/flutter-test/master/documentation/detail.png" width="140" height="280" hspace="20"/>
 
 ## Introduction
 
