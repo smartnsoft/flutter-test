@@ -25,6 +25,7 @@ De notre côté, nous évaluerons le résultat sous différents aspects :
 * maintenabilité de la solution
 * responsivité de l'interface graphique sur différentes tailles de téléphone
 * respect des maquettes et soin apporté à l'UI et à l'UX, gestion des erreurs, du chargement, etc.
+* bonne utilisation de git
 
 > Tous les éléments sont importants ici, ne pas se fier à l'ordre de la liste.
 > En effet, la gestion des erreurs et des contenus vide, par exemple, nous semble dans une application mobile être très importants pour la navigation utilisateur, il est donc capital d'y apporter une attention particulière.
